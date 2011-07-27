@@ -210,6 +210,12 @@ MakePkgs() {
         fi
     fi
 
+    # customizepkg
+    for i in "${deps[@]}"; do
+        cd $buildDir/$i
+        [[ -f "/etc/customizepkg.d/$i" ]] && customizepkg --modify &>/dev/null && success "${colorW}$i${reset} PKGBUILD customized"
+    done
+
     EditPkgs ${deps[@]}
 
     # reverse deps order

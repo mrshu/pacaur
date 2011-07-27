@@ -9,7 +9,8 @@ url="https://github.com/Spyhawk/pacaur"
 license=('GPL')
 depends=('cower' 'expac')
 optdepends=('pacman-color: colorized output'
-            'sudo: install and update packages as non-root')
+            'sudo: install and update packages as non-root'
+            'customizepkg: apply customizepkg modifications')
 backup=('etc/pacaur.conf')
 source=($pkgname $pkgname.conf README.pod)
 md5sums=('109e4495c8327ceca5eb80b5a7e5746e'
